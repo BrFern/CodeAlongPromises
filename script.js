@@ -1,21 +1,31 @@
-let p = new Promise((resolve, reject) => {
-    let a = 1 + 1
-    if (a == 2) {
-        resolve('Success')
-    }else {
-        reject('Failed')
-    }
-})
+// let p = new Promise((resolve, reject) => {
+//     let a = 1 + 1
+//     if (a == 2) {
+//         resolve('Success')
+//     }else {
+//         reject('Failed')
+//     }
+// })
 
-p.then((message) => {
-    console.log('This is in then ' + message)
-}).catch((message) => {
-    console.log('This is in the catch ' + message)
-})
+// p.then((message) => {
+//     console.log('This is in then ' + message)
+// }).catch((message) => {
+//     console.log('This is in the catch ' + message)
+// })
 //catch any errors method
 
 //Similar to callbacks but a bit cleaner than callbacks
 
 //Helpful to do in the background
 
+const recordVideoOne = new Promise ((resolve, reject) => {
+    resolve('Video 1 Recorded')
+})
 
+const recordVideoTwo = new Promise ((resolve, reject) => {
+    resolve('Video 2 Recorded')
+})
+
+const recordVideoThree = new Promise ((resolve, reject) => {
+    resolve ('Video 3 Recorded')
+})
