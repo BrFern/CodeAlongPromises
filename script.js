@@ -29,3 +29,14 @@ const recordVideoTwo = new Promise ((resolve, reject) => {
 const recordVideoThree = new Promise ((resolve, reject) => {
     resolve ('Video 3 Recorded')
 })
+
+//Running all the promises
+Promise.race([
+    recordVideoOne,
+    recordVideoTwo,
+    recordVideoThree
+]).then((message)=> {
+    console.log(message)
+}) 
+//.then will send an array of all the messages.
+//Promise.all called all, Promise.race will only return a single message
